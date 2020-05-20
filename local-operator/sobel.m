@@ -9,8 +9,6 @@ I = double(I);
 
 load('Sobm.mat', 'Sobm');
 load('Sobn.mat', 'Sobn');
-% Sobm = [1 2 1; 0 0 0 ; -1 -2 -1; ].*(1/8);
-% Sobn = [1 0 -1; 2 0 -2 ; 1 0 -1; ].*(1/8); 
 
 % Faltung entlang m und n mit Sobeloperator
 K_m = faltung(I, Sobm);
@@ -29,14 +27,14 @@ end
 
 K=betrag;
 
-disp('Betrag:')
-disp(betrag)
-disp('Richtung:')
-disp(richtung)
+% disp('Betrag:')
+% disp(betrag)
+% disp('Richtung:')
+% disp(richtung)
 
-figure('Name', 'Sobel m'), imagesc(K_m); colormap(gray);
-figure('Name', 'Sobel n'), imagesc(K_n); colormap(gray);
-figure('Name', 'Betrag'), imagesc(betrag); colormap(gray);
-figure('Name', 'Richtung'), imagesc(richtung); colormap(gray);
+% figure('Name', 'Sobel m'), imagesc(K_m); colormap(gray);
+% figure('Name', 'Sobel n'), imagesc(K_n); colormap(gray);
+% figure('Name', 'Betrag'), imagesc(betrag); colormap(gray);
+% figure('Name', 'Richtung'), imagesc(richtung); colormap(gray);
 end
 
