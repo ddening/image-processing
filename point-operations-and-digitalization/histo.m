@@ -12,12 +12,7 @@ maxValue = max(I,[], 'all');    % groesstes Element in Bildmatrix
 
 gHisto = [];
 for g = minValue:maxValue
-    % index:= I==g: liefert Index andem Wert g auftritt
-    % I(index): nutze diesen Index um gesuchten Wert g zu bekommen
-    % count ist Array, welches den Wert 'g' n-mal enthaelt
     count = I(I==g);
-    % numel: liefert Groesse des Array 'count'
-    % berechne relative Haeuffigkeit vom Wert in 'count'
     gHisto(end+1) = numel(count) / numberOfElements;
 end
 % erstelle x-Achse fuers plotten des Grauwerthistogramms
