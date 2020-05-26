@@ -21,4 +21,4 @@ I = imread('gl1k.jpg');
 % segmentation2(I);
 
 %% Main Detection Script
-detection;
+% detection;
