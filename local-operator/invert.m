@@ -3,9 +3,6 @@
 % K=invert(I)  I=Eingangsbildmatrix
 %              K=invertierte Bildmatrix
 %
-% diese ersten Kommentarzeilen vor der eigentlichen Funktion werden von
-% 'help invert' angezeigt
-
 function K=invert(I)
 
 % liefert die Groesse des Bildes

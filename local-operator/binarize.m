@@ -1,3 +1,5 @@
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function [K] = binarize(I, S1, S2)
 if nargin < 3
     multi=false;

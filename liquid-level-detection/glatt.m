@@ -4,6 +4,8 @@
 % [hGlatt, ML, MR, SList]=glatt(h,b,p)  h=Eingangshistogramm
 %                                       b=Glättung in g-Richtung (int value)
 %                                       p=Glättung in h-Richtung (float value)
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function [hGlatt, ML, MR, minima]=glatt(h,b,p)
 [x,y]=size(h);
 hGlatt = zeros(x,y);

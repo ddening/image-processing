@@ -2,6 +2,8 @@
 %
 % J = liquidHeight(Im)  Im=Eingangsbildmatrix
 %                       J=Ausgangsmatrix
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function J = liquidHeight(Im)
 load('mfilter.mat', 'mfilter');
 I = faltung(Im, mfilter);

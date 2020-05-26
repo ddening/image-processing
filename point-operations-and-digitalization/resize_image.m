@@ -4,6 +4,8 @@
 %                    K=verkleinerte Bildmatrix
 %
 % Für den Faktor n sind nur gerade Werte erlaubt
+% Erstellt am 29.04.2020
+% Author: Dimitri Dening
 function K=resize_image(I)
 % einlesen einer Variable
 factor = input('Reduktionsfakor=');

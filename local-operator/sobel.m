@@ -3,6 +3,8 @@
 % K=sobel(I)    I=Eingangsbildmatrix
 %               K=Betrag
 %
+% Erstellt am 12.05.2020
+% Author: Dimitri Dening
 function [Gx, Gy, betrag, richtung]=sobel(I)
 % Bild in double konvertieren
 I = double(I);

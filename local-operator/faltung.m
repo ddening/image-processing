@@ -4,6 +4,8 @@
 %                   F=Faltungskern bzw. Filter
 %                   K=gefaltete Bildmatrix
 %
+% Erstellt am 12.05.2020
+% Author: Dimitri Dening
 function K=faltung(I, F)
 I = double(I);          % Bild in double konvertieren
 [c1,c2] = size(I);      % Dimensionen der Bildmatrix

@@ -1,3 +1,5 @@
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function segmentation(originalImage)
 O = double(originalImage);
 

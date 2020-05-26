@@ -3,6 +3,8 @@
 % L = gesichtSobn(I)    I=Eingangsbildmatrix
 %                       L=Summe der einzelnen Bildzeilen
 %
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function L = gesichtSobn(I)
 load('Sobn.mat', 'Sobn');
 % Bild in double konvertieren

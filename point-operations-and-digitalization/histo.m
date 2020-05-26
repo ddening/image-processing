@@ -4,6 +4,8 @@
 % [gHisto, kHisto]=histo(I)   I=Eingangsbildmatrix
 %                             nHisto=Grauwerthistogramm
 %                             kHisto=kummuliertest Histogramm
+% Erstellt am 29.04.2020
+% Author: Dimitri Dening
 function [gHisto, kHisto]=histo(I)
 %% Erstellt das Grauerthistogramm
 numberOfElements = numel(I);    % bestimmt Anzahl an Elementen in Matrix

@@ -1,3 +1,5 @@
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 function B=segmentation2(I)
 %I = double(I);
 Iadj = imadjust(I,[0 0.3],[0 0.6]);

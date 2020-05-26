@@ -1,3 +1,5 @@
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
 %% 
 close all % schließt alle offenen figures
 clear all % löscht alle Variablen im Workspace
