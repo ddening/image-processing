@@ -29,4 +29,4 @@ end
 K=uint8(K);
 
 % falls das invertierte Bild K sofort hier angezeigt werden soll 
-figure,imshow(K);
+% figure,imshow(K);

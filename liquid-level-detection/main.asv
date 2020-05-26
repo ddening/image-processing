@@ -1,0 +1,39 @@
+% Bildverarbeitung Praktikum 03
+% Fuellstandserkennung
+% Erstellt am 20.05.2020
+% Author: Dimitri Dening
+% Praktikumsgruppe: Y
+%% 
+close all % schließt alle offenen figures
+clear all % löscht alle Variablen im Workspace
+clc % löscht das Command Window
+%% load filters
+load('Bin5.mat', 'Bin5');
+load('Bin3.mat', 'Bin3');
+load('mfilter.mat', 'mfilter');
+load('Sobm.mat', 'Sobm');
+load('Sobn.mat', 'Sobn');
+%% load images
+%I = imread('blutbild.bmp');
+I = imread('gl3k.jpg');
+[z,s] = size(I);
+%%
+% h = histo(I);
+% h=imhist(I);
+% [hG, lu, ru, su] = glatt(h, 10, 19);
+
+% figure, bar(h, 'BarWidth', 0.3)
+% figure, bar(hG, 'BarWidth', 0.3)
+
+%% Erkennung der Flüssigkeitskante
+% liquidHeight(I);
+%% segmentation
+%segmentation(I);
+%segmentation2(I);
+
+%% Contrast
+Ibright = imlocalbrighten(I, 1);
+Ieq = histeq(Ibright);
+[Gx, Gy] = sobel(Ieq);
+Ibin = imbina
+imagesc(Gy); colormap(gray);

@@ -11,13 +11,13 @@ clc % löscht das Command Window
 load A.mat;
 load F.mat;
 K=faltung(A, F);
-figure, imagesc(K); colormap(gray);
 disp('Faltung von A mit Filter F:')
 disp(K);
 sobel(A);
 %% Main - Sobel-Operator
 I = imread('FH1.jpg');
-K=sobel(I);
+[Gx]=sobel(I);
+imagesc(Gx); colormap(gray);
 % invert(K);
 %% Gesichter
 I = imread('gesicht1.jpg');
