@@ -7,11 +7,12 @@
 % Author: Dimitri Dening
 function [J,C] = liquidHeight(Im)
 load('mfilter.mat', 'mfilter');
+% Im = double(Im);
 I = faltung(Im, mfilter);
 [Gx, Gy, Gb] = sobel(I);
 
-J = binarize(Gy, -10);
-J = edge(J, 'canny', 0.95);
+J = binarize(Gy, -12);
+J = edge(J, 'canny', 0.92);
 C = labeloverlay(Im,J, 'Colormap','hot', 'Transparency', 0);
 
 % figure,imshowpair(Gx,Gy,'montage')

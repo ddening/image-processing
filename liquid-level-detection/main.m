@@ -9,7 +9,12 @@ clear all % löscht alle Variablen im Workspace
 clc % löscht das Command Window
 %% load images
 % I = imread('blutbild.bmp');
-I = imread('gl1k.jpg');
+% I = imread('gl4k.jpg');
+% [J,K] = liquidHeight(I);
+% imshow(K);
+
+%% Main Detection Script
+detection;
 %% Histogramme plotten
 % h = histo(I);
 % h=imhist(I);
@@ -20,5 +25,3 @@ I = imread('gl1k.jpg');
 % segmentation(I);
 % segmentation2(I);
 
-%% Main Detection Script
-% detection;
