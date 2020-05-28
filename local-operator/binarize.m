@@ -1,3 +1,12 @@
+% Binarisiert ein Bild I mit einem oder zwei Schwellwerten.
+%
+% K = binarize(I, S1, S2)  I=Eingangsbildmatrix
+%                          S1=Schwellwert 1
+%                          S2=Schwellwert 2
+%                          K=Binarisierte Bildmatrix
+% Es können bis zu zwei Schwellwerte übergeben werden.
+% Bei Übergabe von zwei Schwellwerten muss gelten S1<S2
+%
 % Erstellt am 20.05.2020
 % Author: Dimitri Dening
 function [K] = binarize(I, S1, S2)
@@ -37,5 +46,6 @@ for r=1:row
     j=1;
 end
 
+K=~K;
 end
 
