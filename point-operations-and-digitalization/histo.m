@@ -28,6 +28,8 @@ for i = 1:length(gHisto)        % laufe durch das gesamte Array 'gHisto'
     kHisto(end+1, 1) = s;
 end
 %% Plottet Ergebnisse
-% figure('Name', 'Kummuliertes Histogramm'), bar(kHisto, 'BarWidth', 0.3)
-figure('Name', 'Grauwerthistogramm'), bar(x, gHisto, 'BarWidth', 0.3)
+if nargout<1
+    figure('Name', 'Kummuliertes Histogramm'), bar(kHisto, 'BarWidth', 0.3)
+    figure('Name', 'Grauwerthistogramm'), bar(x, gHisto, 'BarWidth', 0.3)
+end
 end
