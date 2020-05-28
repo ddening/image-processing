@@ -1,12 +1,21 @@
 % Glättung durch gleitenden Mittwert des Histogramm I und berechnet links- und rechtseitige
 % Mittelwerte. Bestimmt zusätzlich ein bzw. mehrere Minima.
 %
-% [hGlatt, ML, MR, SList]=glatt(h,b,p)  h=Eingangshistogramm
+% [hGlatt, ML, MR, minima]=glatt(h,b,p,optionalArgument) 
+%                                       h=Eingangshistogramm
 %                                       b=Glättung in g-Richtung (int value)
 %                                       p=Glättung in h-Richtung (float value)
+%
+%                                       --optionalArgument:
+%                                       'show'  zeigt geglättetes Histogramm mit Minima
 % Erstellt am 20.05.2020
 % Author: Dimitri Dening
-function [hGlatt, ML, MR, minima]=glatt(h,b,p)
+function [hGlatt, ML, MR, minima]=glatt(h,b,p,varargin)
+par = inputParser;
+par.addOptional('display','no',@(x) true);
+par.parse(varargin{:});
+display = par.Results.display;
+
 [x,y]=size(h);
 hGlatt = zeros(x,y);
 %% Glätten vom Histogramm
@@ -45,11 +54,14 @@ for g=1:n
     end
 end
 %% Plotten der Ergebnisse
-figure('Name', 'Geglättetes Histogramm'), bar(hGlatt, 'BarWidth', 0.3)
-if numel(minima) > 0
-    hold on;
-    maxYValue = ylim;
-    line([minima, minima], maxYValue, 'color', 'r');
+if strcmp(display,'show')
+    figure('Name', 'Geglättetes Histogramm (255 hell) (0 dunkel)'), bar(hGlatt, 'BarWidth', 0.3)
+    if numel(minima) > 0
+        hold on;
+        maxYValue = ylim;
+        line([minima, minima], maxYValue, 'color', 'r');
+    end
 end
+
 end
 
